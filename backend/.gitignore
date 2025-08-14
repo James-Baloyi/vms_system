@@ -12,5 +12,6 @@ Logs
 /src/sheshapromaxx.vms.Web.Host/web.config
 /src/sheshapromaxx.vms.Web.Host/sheshapromaxx.vms.Web.Core.xml
 /sh.exe.stackdump
+.vscode/
 
 
