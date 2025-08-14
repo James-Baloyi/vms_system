@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using sheshapromaxx.vms.Domain.Domain.Enums;
+using sheshapromaxx.vms.Domain.Domain.Programs;
 
 namespace sheshapromaxx.vms.Domain.Domain.Applications
 {
@@ -52,6 +53,20 @@ namespace sheshapromaxx.vms.Domain.Domain.Applications
         [Description("Indicates if the application is flagged as fraudulent")]
         public virtual bool IsFraud { get; set; }
 
-        public virtual ProgramBridge? Bridge { get; set; }
+        /// <summary>
+        /// Navigation property to application-program relationships
+        /// </summary>
+        [Display(Name = "Program Links")]
+        [Description("Bridge relationships linking this application to programs")]
+        public virtual ICollection<ProgramBridge> ProgramBridges { get; set; }
+
+        /// <summary>
+        /// Helper property to get all programs for this application
+        /// </summary>
+        [Display(Name = "Programs")]
+        [Description("All programs associated with this application")]
+        public IEnumerable<Program> Programs =>
+            ProgramBridges?.Select(pb => pb.Program) ?? new List<Program>();
+
     }
 }

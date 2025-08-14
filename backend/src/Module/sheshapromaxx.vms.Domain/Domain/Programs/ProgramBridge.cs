@@ -1,6 +1,7 @@
 ﻿using Abp.Domain.Entities.Auditing;
 using Shesha.Domain.Attributes;
 using sheshapromaxx.vms.Domain.Commoditys;
+using sheshapromaxx.vms.Domain.Domain.Applications;
 using sheshapromaxx.vms.Domain.Domain.Categories;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace sheshapromaxx.vms.Domain.Domain.Programs
         /// <summary>
         /// Navigation property to Category
         /// </summary>
-        public virtual Category? Application { get; set; }
+        public virtual Application? Application { get; set; }
 
     }
 }
