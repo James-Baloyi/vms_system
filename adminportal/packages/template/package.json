@@ -11,7 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "smallest": "^1.0.1"
+    "smallest": "^1.0.1",
+    "@shesha-io/enterprise": "2.5.8"
 
   },
   "devDependencies": {
