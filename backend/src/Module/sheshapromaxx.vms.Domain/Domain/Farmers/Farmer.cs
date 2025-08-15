@@ -50,6 +50,7 @@ namespace sheshapromaxx.vms.Domain.Farmers
         public virtual bool Dweller { get; set; }
         public virtual string DisabilityDescription { get; set; }
 
+        [Display(Name = "FarmInformation")]
         public virtual FarmInformation? FarmInformation { get; set; }
         /// <summary>
         /// Indicates if the farmer is a veteran

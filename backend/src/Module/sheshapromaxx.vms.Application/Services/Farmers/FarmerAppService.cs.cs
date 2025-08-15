@@ -1,4 +1,4 @@
-﻿using Abp.Domain.Repositories;
+﻿/*using Abp.Domain.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Shesha;
 using sheshapromaxx.vms.Common.Services.Farmers.Dto;
@@ -85,3 +85,4 @@ namespace sheshapromaxx.vms.Common.Services
     }
 
 }
+*/
