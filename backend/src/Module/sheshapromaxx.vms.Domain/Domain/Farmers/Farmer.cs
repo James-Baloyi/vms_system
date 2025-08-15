@@ -6,6 +6,7 @@ using Abp.Auditing;
 using Shesha.Domain;
 using Shesha.Domain.Attributes;
 using System.ComponentModel;
+using sheshapromaxx.vms.Domain.Domain.FarmInfromation;
 
 
 namespace sheshapromaxx.vms.Domain.Farmers
@@ -47,7 +48,9 @@ namespace sheshapromaxx.vms.Domain.Farmers
         [Display(Name = "Is Dweller")]
         [Description("Indicates if the farmer is a dweller")]
         public virtual bool Dweller { get; set; }
+        public virtual string DisabilityDescription { get; set; }
 
+        public virtual FarmInformation? FarmInformation { get; set; }
         /// <summary>
         /// Indicates if the farmer is a veteran
         /// </summary>

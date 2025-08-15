@@ -37,4 +37,8 @@
     <ProjectReference Include="..\sheshapromaxx.vms.Domain\sheshapromaxx.vms.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\NewFolder\" />
+  </ItemGroup>
+
 </Project>
