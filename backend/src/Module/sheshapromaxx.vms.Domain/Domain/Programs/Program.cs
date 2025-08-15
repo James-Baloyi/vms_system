@@ -24,13 +24,6 @@ namespace sheshapromaxx.vms.Domain.Domain.Programs
         [Description("Bridge relationships linking this program to applications")]
         public virtual ICollection<ProgramBridge> ProgramBridges { get; set; }
 
-        /// <summary>
-        /// Helper property to get all applications for this program
-        /// </summary>
-       /* [Display(Name = "Applications")]
-        [Description("All applications associated with this program")]
-        public IEnumerable<Application> Applications =>
-            ProgramBridges?.Select(pb => pb.Application) ?? new List<Application>();*/
 
     }
 }

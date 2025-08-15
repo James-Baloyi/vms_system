@@ -147,6 +147,7 @@ namespace sheshapromaxx.vms.Web.Host.Startup
 			// note: already registered in the ABP
 			AppContextHelper.Configure(app.ApplicationServices.GetRequiredService<IHttpContextAccessor>());
 
+
 			app.UseConfigurationFramework();
 
 			app.UseAbp(options =>
