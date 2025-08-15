@@ -58,7 +58,7 @@ namespace sheshapromaxx.vms.Domain.Domain.Applications
         /// </summary>
         [Display(Name = "Program Links")]
         [Description("Bridge relationships linking this application to programs")]
-        public virtual ICollection<ProgramBridge> ProgramBridges { get; set; }
+        public virtual ICollection<ProgramBridge>? ProgramBridges { get; set; }
 
         /// <summary>
         /// Helper property to get all programs for this application

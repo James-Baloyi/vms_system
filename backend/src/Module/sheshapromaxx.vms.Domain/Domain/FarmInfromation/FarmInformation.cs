@@ -35,10 +35,5 @@ namespace sheshapromaxx.vms.Domain.Domain.FarmInfromation
         [Display(Name = "Production Size")]
         [Description("The production size or volume of the farm")]
         public virtual double ProductionSize { get; set; }
-
-        /// <summary>
-        /// Navigation property to Farmer
-        /// </summary>
-        public virtual Farmer? Farmer { get; set; }
     }
 }
