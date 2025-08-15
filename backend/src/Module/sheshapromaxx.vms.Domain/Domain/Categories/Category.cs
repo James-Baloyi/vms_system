@@ -28,6 +28,10 @@ namespace sheshapromaxx.vms.Domain.Domain.Categories
         [Description("Description of the category")]
         public virtual string Description { get; set; }
 
+
+        [Display(Name = "Commodity Id")]
+        public virtual Commodity? Commodity { get; set; }
+
         /*[Display(Name = "Commodities")]
         [Description("List  of the commodities")]
         public virtual CommodityCategoryBridge? CommodityCategory { get; set; }*/
@@ -35,7 +39,7 @@ namespace sheshapromaxx.vms.Domain.Domain.Categories
         /// <summary>
         /// Navigation property to commodity-category relationships
         /// </summary>
-        [Display(Name = "Commodity Category Links")]
+       /* [Display(Name = "Commodity Category Links")]
         [Description("Bridge relationships linking this category to commodities")]
         public virtual ICollection<CommodityCategoryBridge>? CommodityCategoryBridges { get; set; }
 
@@ -44,7 +48,7 @@ namespace sheshapromaxx.vms.Domain.Domain.Categories
         /// </summary>
         [Display(Name = "Commodities")]
         [Description("All commodities that belong to this category")]
-        public IEnumerable<Commodity> Commodities => CommodityCategoryBridges?.Select(cb => cb.Commodity) ?? new List<Commodity>();
+        public IEnumerable<Commodity> Commodities => CommodityCategoryBridges?.Select(cb => cb.Commodity) ?? new List<Commodity>();*/
 
 
 

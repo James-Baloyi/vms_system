@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using sheshapromaxx.vms.Domain.Domain.Applications;
 using Shesha.Domain;
 using sheshapromaxx.vms.Domain.Domain.Suppliers;
+using sheshapromaxx.vms.Domain.Domain.Orders;
 
 namespace sheshapromaxx.vms.Domain.Domain.Vouchers
 {
@@ -69,10 +70,14 @@ namespace sheshapromaxx.vms.Domain.Domain.Vouchers
         [Description("Current remaining amount of the voucher")]
         public virtual double? CurrentAmount { get; set; }
 
+
+        [Display(Name = "Program Id")]
+        public virtual Order? Order { get; set; }
+
         /// <summary>
         /// Navigation property to voucher-supplier relationships
         /// </summary>
-        [Display(Name = "Supplier Links")]
+       /* [Display(Name = "Supplier Links")]
         [Description("Bridge relationships linking this voucher to suppliers")]
         public virtual ICollection<VoucherSupplierBridge> VoucherSupplierBridges { get; set; }
 
@@ -82,7 +87,7 @@ namespace sheshapromaxx.vms.Domain.Domain.Vouchers
         [Display(Name = "Suppliers")]
         [Description("All suppliers associated with this voucher")]
         public IEnumerable<Supplier> Suppliers =>
-            VoucherSupplierBridges?.Select(vsb => vsb.Supplier) ?? new List<Supplier>();
+            VoucherSupplierBridges?.Select(vsb => vsb.Supplier) ?? new List<Supplier>();*/
 
 
         /// <summary>

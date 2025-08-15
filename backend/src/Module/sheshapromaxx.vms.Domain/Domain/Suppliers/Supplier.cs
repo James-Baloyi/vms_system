@@ -50,17 +50,20 @@ namespace sheshapromaxx.vms.Domain.Domain.Suppliers
         [Description("Contact email address of the supplier")]
         public virtual string Email { get; set; }
 
+        [Display(Name = "Voucher Id")]
+        public virtual Voucher? Voucher { get; set; } 
+
         /// <summary>
         /// Navigation property to supplier-program relationships
         /// </summary>
-        [Display(Name = "Program Links")]
+        /*[Display(Name = "Program Links")]
         [Description("Bridge relationships linking this supplier to programs")]
         public virtual ICollection<SupplierProgramBridge> SupplierProgramBridges { get; set; }
-
+*/
         /// <summary>
         /// Helper property to get all programs for this supplier
         /// </summary>
-        [Display(Name = "Programs")]
+       /* [Display(Name = "Programs")]
         [Description("All programs associated with this supplier")]
         public IEnumerable<Program> Programs =>
             SupplierProgramBridges?.Select(spb => spb.Program) ?? new List<Program>();
@@ -78,7 +81,7 @@ namespace sheshapromaxx.vms.Domain.Domain.Suppliers
         [Display(Name = "Vouchers")]
         [Description("All vouchers that can be used at this supplier")]
         public IEnumerable<Voucher> Vouchers =>
-            VoucherSupplierBridges?.Select(vsb => vsb.Voucher) ?? new List<Voucher>();
+            VoucherSupplierBridges?.Select(vsb => vsb.Voucher) ?? new List<Voucher>();*/
 
 
 

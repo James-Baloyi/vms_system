@@ -61,20 +61,43 @@ namespace sheshapromaxx.vms.Domain.Domain.Applications
         [Description("The farmer who submitted this application")]
         public virtual Farmer? Farmer { get; set; }
 
+
+        [Display(Name = "Program Id")]
+        public virtual Program? Program { get; set; }
+
         /// <summary>
         /// Navigation property to application-program relationships
         /// </summary>
-        [Display(Name = "Program Links")]
+        /*[Display(Name = "Program Links")]
         [Description("Bridge relationships linking this application to programs")]
         public virtual ICollection<ProgramBridge>? ProgramBridges { get; set; }
 
+        private List<Program> _programs;
+
         /// <summary>
-        /// Helper property to get all programs for this application
+        /// List of programs for this application
         /// </summary>
         [Display(Name = "Programs")]
         [Description("All programs associated with this application")]
-        public IEnumerable<Program> Programs =>
-            ProgramBridges?.Select(pb => pb.Program) ?? new List<Program>();
+        public virtual List<Program> Programs
+        {
+            get
+            {
+                if (_programs == null)
+                    _programs = ProgramBridges?.Select(pb => pb.Program)?.ToList() ?? new List<Program>();
+                return _programs;
+            }
+            set { _programs = value; }
+        }
+
+        /// <summary>
+        /// Constructor to initialize collections
+        /// </summary>
+        public Application()
+        {
+            ProgramBridges = new HashSet<ProgramBridge>();
+        }
+*/
 
     }
 }

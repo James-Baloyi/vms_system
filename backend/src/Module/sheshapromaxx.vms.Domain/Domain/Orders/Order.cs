@@ -89,5 +89,7 @@ namespace sheshapromaxx.vms.Domain.Domain.Orders
         [Display(Name = "Delivery Notes")]
         [Description("Special notes and instructions for delivery")]
         public virtual string DeliveryNotes { get; set; }
+
+        public virtual int Quantity { get; set; }
     }
 }
