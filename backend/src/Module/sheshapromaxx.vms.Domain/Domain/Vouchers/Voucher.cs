@@ -70,6 +70,8 @@ namespace sheshapromaxx.vms.Domain.Domain.Vouchers
         [Description("Current remaining amount of the voucher")]
         public virtual double? CurrentAmount { get; set; }
 
+        public virtual bool? IsRedeem { get; set; }
+
 
         [Display(Name = "Program Id")]
         public virtual Order? Order { get; set; }
