@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using sheshapromaxx.vms.Domain.Domain.Enums;
 using sheshapromaxx.vms.Domain.Domain.Programs;
+using sheshapromaxx.vms.Domain.Farmers;
 
 namespace sheshapromaxx.vms.Domain.Domain.Applications
 {
@@ -52,6 +53,13 @@ namespace sheshapromaxx.vms.Domain.Domain.Applications
         [Display(Name = "Is Fraud")]
         [Description("Indicates if the application is flagged as fraudulent")]
         public virtual bool IsFraud { get; set; }
+
+        /// <summary>
+        /// Navigation property to Farmer
+        /// </summary>
+        [Display(Name = "Farmer")]
+        [Description("The farmer who submitted this application")]
+        public virtual Farmer? Farmer { get; set; }
 
         /// <summary>
         /// Navigation property to application-program relationships
